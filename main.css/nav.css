@@ -1,0 +1,81 @@
+.parent{
+    overflow: hidden;
+}
+nav{
+    height: 90px;
+    width:100%;
+    z-index: 1000;
+    position: fixed;
+    transition: background-color .2s ease-in-out;
+}
+nav ul{
+    height:90px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+nav ul li a{
+    padding: 0 30px;
+    position: relative;
+}
+.change{
+    background: var(--chg2-Color);
+}
+nav ul li a:before{
+    content: "";
+    bottom: -5px;
+    left: 27.5%;
+    position: absolute;
+    width: 0%;
+    padding: 2px 0;
+    background: var(--dark-Color);
+    border-radius: 10px;
+    transition: all 1s ease-in-out;
+}
+nav ul li a:hover:before{
+    width: 45%;
+}
+nav ul li:nth-child(7) a{
+    padding: 0 50px;
+    color: var(--light-Color);
+    font-size: 23px;
+    -webkit-text-stroke: 1px var(--dark-Color);
+}
+nav ul li:nth-child(3) a:before{
+    left: 22%;
+}
+nav ul li:nth-child(3) a:hover:before{
+    width: 55%;
+}
+.act:before{
+    width: 45%;
+}
+nav ul li:nth-child(7) a span{
+    position: absolute;
+    top: 4%;
+    right: 32%;
+    width: 20px;
+    height:20px;
+    border-radius: 20px;
+    background: var(--bag-Color);
+    line-height: 20px;
+    text-align: center;
+    -webkit-text-stroke:0;
+    font-size: 16px;
+}
+nav ul li:nth-child(7) a:before{
+    display: none;
+}
+nav ul li a{
+    color: var(--light-Color);
+    font-size: 18px;
+    font-weight: bold;
+}
+nav span{
+    display: block;
+    width: 40%;
+    color:var(--light-Color);
+    font-weight: 700;
+    font-size: 35px;
+    font-family: Monospace;
+}
